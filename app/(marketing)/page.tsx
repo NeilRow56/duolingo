@@ -23,7 +23,7 @@ export default function Home() {
         <h1 className="font=bold max-w-[480px] text-center text-xl text-neutral-600 lg:text-3xl">
           Learn, practice, and master new languages with Lingo
         </h1>
-        <div>
+        <div className="flex w-full max-w-[330px] flex-col items-center gap-y-3">
           <ClerkLoading>
             <Loader className="h-5 w-5 animate-spin text-muted-foreground" />
           </ClerkLoading>
