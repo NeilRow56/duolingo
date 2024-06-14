@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:studio": "npx drizzle-kit studio",
+    "db:push": "npx drizzle-kit push:pg"
   },
   "dependencies": {
     "@clerk/nextjs": "^4.28.1",
@@ -24,7 +26,8 @@
     "@types/react-world-flags": "^1.4.5",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "drizzle-orm": "^0.31.2",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.27.0",
     "flagpack": "^1.0.5",
     "lucide-react": "^0.390.0",
     "next": "13.5.4",
@@ -43,10 +46,11 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10",
-    "drizzle-kit": "^0.22.6",
+    "drizzle-kit": "^0.19.3",
     "eslint": "^8",
     "eslint-config-next": "13.5.4",
     "eslint-config-prettier": "^9.1.0",
+    "pg": "^8.12.0",
     "postcss": "^8",
     "prettier": "^3.3.1",
     "prettier-plugin-tailwindcss": "^0.6.2",
