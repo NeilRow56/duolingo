@@ -5,7 +5,7 @@ import { Card } from './Card'
 
 type ListProps = {
   courses: courses[]
-  activeCourseId: number
+  activeCourseId?: any
 }
 
 export const List = ({ activeCourseId, courses }: ListProps) => {
