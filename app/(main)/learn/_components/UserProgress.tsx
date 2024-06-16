@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 type UserProgressProps = {
-  activeCourse: { imageSrc: string; title: string } // REPLACE with database types later
+  activeCourse: { imageSrc: string; title: string }
   hearts: number
   points: number
   hasActiveSubscription: boolean
