@@ -22,18 +22,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning={true}>
         <body className={font.className}>
-          <Toaster
-            toastOptions={{
-              unstyled: true,
-              classNames: {
-                error: 'bg-red-400',
-                success: 'text-green-400',
-                warning: 'text-yellow-400',
-                info: 'bg-blue-400',
-              },
-            }}
-            position="bottom-right"
-          />
+          <Toaster richColors />
 
           {children}
         </body>

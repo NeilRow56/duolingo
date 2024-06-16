@@ -3,8 +3,16 @@ import { FeedWrapper } from '@/components/FeedWrapper'
 import { StickyWrapper } from '@/components/StickyWrapper'
 import { Header } from './_components/Header'
 import { UserProgress } from './_components/UserProgress'
+import { getUserProgress } from '@/db/queries'
+import { redirect } from 'next/navigation'
 
-const LearnPage = () => {
+const LearnPage = async () => {
+  const userProgressData = getUserProgress()
+
+  const [userProgress] = await Promise.all([userProgressData])
+  if (!userProgress || !userProgress.activeCourse) {
+    redirect('/courses')
+  }
   return (
     <div className="flex flex-row-reverse gap-[48px] px-6">
       <StickyWrapper>
