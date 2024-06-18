@@ -1,3 +1,4 @@
+import { lessons } from '@/types'
 import { LessonButton } from './LessonButton'
 import { UnitBanner } from './UnitBanner'
 
@@ -8,7 +9,7 @@ type unitProps = {
   title: string
   lessons: any
   activeLesson: any
-  activeLessonPercentage: number
+  activeLessonPercentage: any
 }
 
 export const Unit = ({

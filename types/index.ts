@@ -12,3 +12,18 @@ export type userProgress = {
   hearts: number
   points: number
 }
+
+export type lessons = {
+  id: number
+  title: string
+  unitId: number
+  order: number
+}
+
+export type challenges = {
+  id: number
+  lessonId: number
+  type: number
+  question: string
+  order: number
+}
