@@ -5,6 +5,7 @@ import './globals.css'
 import { Toaster } from 'sonner'
 import { ClerkProvider } from '@clerk/nextjs'
 import { ThemeProvider } from './providers/ThemeProvider'
+import { ExitModal } from '@/components/modals/ExitModal'
 
 const font = Nunito({ subsets: ['latin'] })
 
@@ -23,7 +24,7 @@ export default function RootLayout({
       <html lang="en" suppressHydrationWarning={true}>
         <body className={font.className}>
           <Toaster richColors />
-
+          <ExitModal />
           {children}
         </body>
       </html>

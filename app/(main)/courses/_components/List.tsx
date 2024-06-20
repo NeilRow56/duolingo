@@ -1,15 +1,15 @@
 'use client'
 
-import { courses } from '@/types'
 import { Card } from './Card'
 import { useRouter } from 'next/navigation'
 import { useTransition } from 'react'
 import { upsertUserProgress } from '@/actions/user-progress'
 import { toast } from 'sonner'
+import { courses, userProgress } from '@/db/schema'
 
 type ListProps = {
-  courses: courses[]
-  activeCourseId?: any
+  courses: (typeof courses.$inferSelect)[]
+  activeCourseId?: typeof userProgress.$inferSelect.activeCourseId
 }
 
 export const List = ({ activeCourseId, courses }: ListProps) => {

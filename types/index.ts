@@ -27,3 +27,12 @@ export type challenges = {
   question: string
   order: number
 }
+
+export type challengeOptions = {
+  id: number
+  challengeId: number
+  text: string
+  correct: boolean
+  imageSrc: string
+  audioSrc: string
+}

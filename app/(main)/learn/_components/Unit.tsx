@@ -1,4 +1,4 @@
-import { lessons } from '@/types'
+import { lessons, units } from '@/db/schema'
 import { LessonButton } from './LessonButton'
 import { UnitBanner } from './UnitBanner'
 
@@ -7,9 +7,15 @@ type unitProps = {
   order: number
   description: string
   title: string
-  lessons: any
-  activeLesson: any
-  activeLessonPercentage: any
+  lessons: (typeof lessons.$inferSelect & {
+    completed: boolean
+  })[]
+  activeLesson:
+    | (typeof lessons.$inferSelect & {
+        units: typeof units.$inferSelect
+      })
+    | undefined
+  activeLessonPercentage: number
 }
 
 export const Unit = ({

@@ -6,7 +6,6 @@ import {
   challengeProgress,
   courses,
   lessons,
-  challenges,
   units,
   userProgress,
 } from './schema'
