@@ -3,7 +3,6 @@
 import { challengeOptions, challenges } from '@/db/schema'
 import { useState } from 'react'
 import { Header } from './Header'
-import { ActivitySquare } from 'lucide-react'
 import { QuestionBubble } from './QuestionBubble'
 import { Challenge } from './Challenge'
 
