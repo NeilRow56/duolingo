@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
-import { CheckCircle } from 'lucide-react'
+import { CheckCircle, XCircle } from 'lucide-react'
 import { useKey, useMedia } from 'react-use'
 
 type footerProps = {
@@ -32,6 +32,21 @@ export const Footer = ({
             <CheckCircle className="mr-4 h-6 w-6 lg:h-10 lg:w-10" />
             Nicely Done!
           </div>
+        )}
+        {status === 'wrong' && (
+          <div className="flex items-center text-base font-bold text-rose-500 lg:text-2xl">
+            <XCircle className="mr-4 h-6 w-6 lg:h-10 lg:w-10" />
+            Try again!
+          </div>
+        )}
+        {status === 'completed' && (
+          <Button
+            variant="default"
+            size={isMobile ? 'sm' : 'lg'}
+            onClick={() => (window.location.href = `/lesson/${lessonId}`)}
+          >
+            Practice again
+          </Button>
         )}
         <Button
           disabled={disabled}

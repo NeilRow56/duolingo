@@ -37,7 +37,7 @@ export const Quiz = ({
   })
 
   const [selectedOption, setSelectedOption] = useState<number>()
-  const [status, setStatus] = useState<'correct' | 'wrong' | 'none'>('correct')
+  const [status, setStatus] = useState<'correct' | 'wrong' | 'none'>('none')
 
   const challenge = challenges[activeIndex]
   const options = challenge?.challengeOptions ?? []
@@ -80,7 +80,11 @@ export const Quiz = ({
           </div>
         </div>
       </div>
-      <Footer disabled={!selectedOption} status={status} onCheck={() => {}} />
+      <Footer
+        disabled={!selectedOption}
+        status={'completed' || status}
+        onCheck={() => {}}
+      />
     </>
   )
 }
